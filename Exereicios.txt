@@ -1,0 +1,23 @@
+1 - Criar um deployment para o nginx com a seguintes caracteristicas:
+    Replicas 5
+    Port 80 TCP
+    Volume para o /usr/share/nginx/html
+
+2 - Criar um service do tipo nodePort e com a porta 31212 bindando no host.
+
+3 - Exportar o diretório /k8s via nfs.
+
+4 - Criar um PV com 150M utilizando o nosso fs NFS.
+
+5 - Criar um PVC utilizando o nosso fs NFS.
+
+6 - Montar o volume no pod em /usr/share/nginx/html com o index persolizado.
+
+7 - Criar um label inficando se é producao ou dev e outro indicando o nome do app.
+
+8 - Setar um label dc=BR para o node-1, dc=USA node-2 e dc=UK node-3
+
+ARQUIVOS QUE TEREMOS: deployment.yaml service.yaml pv.yaml pvc.yaml
+
+
+IMPORTANTE - Os arquivos usados no exercicios deverão estar em um repo no git com nome: SeuNome_k8sXP
