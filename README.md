@@ -34,7 +34,7 @@ Nas outras máquinas instalar, isso é para que tenhamos todas as ferramentas ne
 $ sudo isntall apt-get nfs-common 
 ```
 
-Para ver quais os diretórios estão sendo exportados digite o comando `showmount` e o IP.
+Para ver quais os diretórios estão sendo exportados digite o comando `showmount -e 172.31.10.5`.
 
 ```
 $ showmount -e 172.31.3.51
@@ -46,7 +46,7 @@ Para compartilhar o diretório remoto
 $ mount 172.31.3.51:/opt/curso-kubernetes /mnt
 ```
 
-Voltamos para a `master` e criamos um arquivo chamado **pv.yaml** e adicionar o seguinte conteúdo.
+Voltamos para o `master` e criamos um arquivo chamado **pv.yaml**(**pv, PercistenteVolume**) e adicionamos o seguinte conteúdo.
 
 ```sh
 $ vim pv.yaml
@@ -75,7 +75,7 @@ spec:
 $ kubectl create -f pv.yaml
 ```
 
-Somente isso não adianta nada, ainda precisamos ter o **pvc** PercistenteVolumeClaim , precisamos dele para podermos atachar no pod.
+Somente isso não adianta nada, ainda precisamos ter o **pvc, PercistenteVolumeClaim**, precisamos dele para podermos atachar no pod.
 
  ```sh
  $ vim pvc.yaml

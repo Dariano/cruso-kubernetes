@@ -58,11 +58,11 @@ https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
 ### Deployments
 
-Quando você utiliza o `kubectl run`, você está realizando o deploy de um de um objeto chamado Deployment. Como outros objetos, o Deployment também pode ser cirado através de um arquivo YAML ou de um JSON, os spec files.
+Quando você utiliza o `kubectl run`, você está realizando o deploy de um de um objeto chamado **Deployment**. Como outros objetos, o Deployment também pode ser cirado através de um arquivo YAML ou de um JSON, os spec files.
 
 Se você deseja  alterar alguma configuração de seus objetos, como o pod, você pode utilizar o `kubectl apply`, através de um spec file, ou ainda através do `kubectl edit`.
 
-As versões anteriores dos ReplicaSet são mantidas, possibilitando o rollback em caso de falhas.
+As versões anteriores dos **ReplicaSet** são mantidas, possibilitando o **rollback** em caso de falhas.
 
 As **label** são importantes para o gerenciamentoo do cluster, pois com ela é possível buscar ou selecionar recursos em seu cluster, fazendo com que você consiga organizar em pequenas categorias, facilitando assim a sua busca e organizando seus pods e seus recursos do cluster. As **labels** não são recursos do API server, eles são armazenados no metadata em formato de chave-valor.
 
