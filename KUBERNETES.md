@@ -82,3 +82,19 @@ Modifique a versão da imagem
 > kubectl rollout undo deployment nginx --to-revision 1
 
 > kubectl describe pod nginx-3421 | grep -i image
+
+### Replication Controller
+
+Está sendo substituído pelo **ReplicaSet**. Ele garante a quantidade solicitada de **pods** para o **Deployment**. Uma vez o **Deployment** já efetuado, é o **ReplicaSet** que controla a quantidade de pods em execução, caso algum pod venha a ser finalizado, ele irá subir outro em seu lugar, garantindo assim a quantidade de réplicas solicitadas.
+
+### ReplicaSet
+
+ReplicaSet é a nova geração do Replication Controller, A principal diferença entre eles é o suporte a selector.
+
+O ReplicaSet garante a quantidade solicitada de pods para o Deployment. Uma vez o Deployment já efetuado, é o ReplicaSet que controla a quantidade de pods em execução, caso algum pod venha a ser finalizado, ele irá subir outro em seu lugar, garantindo assim a quantidade de réplicas solicitadas.
+
+### Deployment
+
+É um nível acima do ReplicaSet. Ele é responsável por gerenciar os ReplicaSet e de realizar updates nos pods. É recomendável sempre você trabalhar com os Deployments ou invés de criar diretamente o ReplicaSet. Criando um Deployment você já cria um ReplicaSet.
+
+Uma das coisas interessantes de usar o ReplicaSet é justamente a possibilidade de se utilizar os selectores.
