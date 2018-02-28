@@ -13,7 +13,7 @@ spec:
       - name: app1
         image: dockersamples/static-site
         env:
-        - name: ARTHOR
+        - name: AUTHOR
           value: GIROPOPS
         ports:
         - containerPort: 80
